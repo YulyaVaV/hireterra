@@ -17,7 +17,7 @@ import Support from './view/Support/Support'
 
 const routers = [
   {
-    path: '/',
+    path: '/main',
     element: <Home />
   },
   {
@@ -70,7 +70,7 @@ const routers = [
   },
   {
     path: '*',
-    element: <Navigate replace to="/" />
+    element: <Navigate replace to="/main" />
   },
 ]
 
