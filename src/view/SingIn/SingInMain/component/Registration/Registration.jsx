@@ -10,15 +10,6 @@ const Registration = () => {
           <input type="text" id="name" required />
           <label for="name">Name</label>
         </div>
-        <div class="form__item">
-          <input type="text" id="surname" required />
-          <label for="surname">Surname</label>
-        </div>
-
-        <div class="form__item">
-          <input type="text" id="email" required />
-          <label for="email">Email</label>
-        </div>
 
         <div class="form__item">
           <input type="password" id="password" required />
@@ -35,11 +26,7 @@ const Registration = () => {
 
       <div className="registration__account">
         <div className="registration__account-orange">
-          <OrangeButton title="Sing Up"/> 
-        </div>
-        <div className="registration__account-wrapp">
-          <p>Already have an account?</p> 
-          <a href="/singin">Sign In</a>  
+          <OrangeButton title="Sing In"/> 
         </div>
       </div> 
     </div>

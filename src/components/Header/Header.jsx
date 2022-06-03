@@ -42,7 +42,7 @@ const Header = () => {
           <NavLink to="/contact" className="header__link">Contact us</NavLink>
           <NavLink to="/about" className="header__link">About us</NavLink>
           <NavLink to="/support" className="header__link">Support</NavLink>
-          <NavLink to="/blog" className="header__link">Blog</NavLink>
+          {/* <NavLink to="/blog" className="header__link">Blog</NavLink> */}
          
           <hr className="header__vert-line"/>
 

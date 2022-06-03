@@ -55,8 +55,12 @@ const HomeHeader = () => {
             <h1 className="home-header__block-title">100% anonymous<br />US IT job search platform</h1>
           </div>
           <div className="home-header__buttons">
-            <BlueButton title="Find a job"/>
-            <ButtonWithSymbol title="For recruiters"/>
+            <a href="/jobs">
+              <BlueButton title="Find a job"/>
+            </a>
+            <a href="/recruiters">
+              <ButtonWithSymbol title="For recruiters"/>
+            </a>
           </div>
         </div>
         <div className="home-header__directions">

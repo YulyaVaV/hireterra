@@ -14,7 +14,9 @@ const CandidatesHeader = () => {
       <div className="candidates-header__instruction">
         <p className="candidates-header__instruction-text">Select list of short summaries of candidates’ profiles is below; please sign in/up to access the full list of complete profiles, see more results, and use filters.</p>
          <div className="candidates-header__instruction-button">
-           <ButtonWithSymbol title="Sign In"/>
+           <a href="/singin"> 
+             <ButtonWithSymbol title="Sign In"/>
+           </a>
          </div>
       </div>
     </div>

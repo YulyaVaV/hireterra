@@ -14,7 +14,9 @@ const JobsHeader = () => {
       <div className="jobs-header__instruction">
         <p className="jobs-header__instruction-text">Select list of brief descriptions of the positions is below; please sign in/up to access full list, see complete descriptions, and use filters.</p>
          <div className="jobs-header__instruction-button">
-           <ButtonWithSymbol title="Sign In"/>
+           <a href="/singin">
+             <ButtonWithSymbol title="Sign In"/>
+           </a>
          </div>
       </div>
     </div>
