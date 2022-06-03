@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hireterra/static/css/main.2003e945.css",
-    "main.js": "/hireterra/static/js/main.7c189d2b.js",
+    "main.js": "/hireterra/static/js/main.a1a616af.js",
     "static/media/orange-bg.png": "/hireterra/static/media/orange-bg.3581995182e0622480ea.png",
     "static/media/map.png": "/hireterra/static/media/map.3a1208641e82a2a6b5e2.png",
     "static/media/middle-orange-bg.png": "/hireterra/static/media/middle-orange-bg.42b3b8ba20db832e119a.png",
@@ -95,10 +95,10 @@
     "static/media/item.svg": "/hireterra/static/media/item.49a7b6a124a5d8d02e0ea85b3f7aec44.svg",
     "static/media/orange-round.svg": "/hireterra/static/media/orange-round.ea91b8d4f1d05254064a10bb030b8f8a.svg",
     "main.2003e945.css.map": "/hireterra/static/css/main.2003e945.css.map",
-    "main.7c189d2b.js.map": "/hireterra/static/js/main.7c189d2b.js.map"
+    "main.a1a616af.js.map": "/hireterra/static/js/main.a1a616af.js.map"
   },
   "entrypoints": [
     "static/css/main.2003e945.css",
-    "static/js/main.7c189d2b.js"
+    "static/js/main.a1a616af.js"
   ]
 }
