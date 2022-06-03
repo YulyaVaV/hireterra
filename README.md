@@ -1,7 +1,7 @@
 ## HIRETERRA
 
-- [DEMO LINK HERE]()
-- [Figma]()
+- [DEMO LINK HERE](https://yulyavav.github.io/hireterra/)
+- [Figma](https://www.figma.com/file/udgq3azRlJf0VDOqfaE7aR/Hireterra?node-id=1%3A24)
 
 ------------------------------------------
 React, React Router, HTML, SCSS, BEM, Cross-browser semantic and adaptive layout
