@@ -1,0 +1,39 @@
+@import '../../../../../../utils/vars.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.specifics-swiper {
+  .swiper-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .swiper-pagination {
+    display: none;
+
+    @include Tablet {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 2%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  .swiper-pagination-bullet {
+    width: 3px !important;
+    height: 3px !important;
+    background: $black;
+    border-radius: 50%;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: $black !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+  }
+}

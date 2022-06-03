@@ -1,0 +1,28 @@
+@import '../../../../../../utils/vars.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.roles {
+  padding-bottom: 30px;
+
+  @include Phone {
+    padding-bottom: 20px;
+  }
+
+  h2 {
+    padding-bottom: 10px;
+
+    @include Phone {
+      padding-bottom: 0;
+    }
+  }
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include Phone {
+      gap: 0;
+    }
+  }
+}

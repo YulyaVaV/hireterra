@@ -1,0 +1,73 @@
+@import '../../../../../../utils/mixins.scss';
+@import '../../../../../../utils/vars.scss';
+
+.faq-recr-block {
+  max-width: 880px;
+  width: 100%;
+  transition-duration: 1s;
+
+  &:hover {
+    .faq-recr-block__line {
+      background-color: $orange;
+    }
+    path {
+      stroke: $orange;
+    }
+  }
+
+  path {
+    transition: .3s;
+  }
+
+  &__wrapp {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: $black;
+    text-align: left;
+
+    @include Phone {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__descr {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $black;
+    text-align: left;
+    transition-duration: 1s;
+    padding-top: 10px;
+
+    @include Phone {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__show {
+    display: none;
+  }
+
+  &__line {
+    width: 100%;
+    background-color: $lightGrayBg;
+    height: 2px;
+    margin: 20px 0;
+    border: none;
+    outline: none;
+    transition: .3s;
+  }
+}

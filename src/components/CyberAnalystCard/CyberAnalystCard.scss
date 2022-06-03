@@ -1,0 +1,106 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/vars.scss';
+
+.cyber-analyst-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 60px 20px;
+  width: 420px;
+  background: $white;
+  border: 1px solid $borderBlue;
+  box-shadow: $shadow;
+  border-radius: 50px;
+  text-align: left;
+
+  @include xll {
+    width: 300px;
+    padding: 20px 30px 10px;
+    border-radius: 40px;
+  }
+  @include MiniPhone {
+    width: 280px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 30px;
+    color: $black;
+
+    @include xll {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__cities {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: $black;
+    padding-bottom: 10px;
+    
+    @include xll {
+      font-size: 10px;
+      line-height: 16px;
+      padding-bottom: 5px;
+    }
+  }
+  &__experience {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: $black;
+    padding-bottom: 10px;
+    
+    @include xll {
+      font-size: 10px;
+      line-height: 18px;
+      padding-bottom: 5px;
+    }
+  }
+  &__tech {
+    display: flex;
+    gap: 10px;
+
+    p {
+      font-size: 12px;
+      @include xll {
+        font-size: 10px;
+      }
+    }
+    
+    @include xll {
+      gap: 6px;
+    }
+  }
+  &__wrapp {
+    display: flex;
+    padding-bottom: 10px;
+    align-items: center;
+    
+    @include xll {
+      padding-bottom: 5px;
+    }
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 40px;
+    color: $borderBlue;
+    
+    @include xll {
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+  &__symb {
+    margin-right: 20px;
+    
+    @include xll {
+      margin-right: 10px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

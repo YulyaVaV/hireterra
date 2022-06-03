@@ -1,0 +1,25 @@
+@import '../../../../../../../../utils/vars.scss';
+@import '../../../../../../../../utils/mixins.scss';
+
+.one-vacancy-titles {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+
+  @include Phone {
+    padding-bottom: 0;
+  }
+
+  p {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+
+    @include Phone {
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../../../../utils/vars.scss';
+@import '../../../../../utils/mixins.scss';
+
+.privacy-sources {
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: $black; 
+
+    @include Phone {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+  &__descr {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+
+    @include Phone {
+      font-size: 10px;
+      line-height: 20px;
+      padding-top: 10px;
+    }
+  }
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+  }
+}

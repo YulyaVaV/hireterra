@@ -1,0 +1,35 @@
+@import '../../../../../../utils/mixins.scss';
+@import '../../../../../../utils/vars.scss';
+
+.hightlights {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding-bottom: 30px;
+
+  @include Tablet {
+    flex-direction: column;
+  }
+
+  @include Phone {
+    padding-bottom: 20px;
+    gap: 0;
+  }
+
+  &__title {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  &__descr {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+
+    @include Phone {
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+}

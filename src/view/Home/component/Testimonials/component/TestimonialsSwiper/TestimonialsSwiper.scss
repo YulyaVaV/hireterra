@@ -1,0 +1,115 @@
+@import '../../../../../../utils/vars.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.testimonials-swiper {
+  position: relative;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .swiper-wrapper {
+    padding: 0 80px 160px;
+    display: flex;
+
+    @include Desktop {
+      padding: 0 40px 160px;
+      display: flex;
+      // flex-shrink: 1;
+    }
+    @include Phone {
+      padding: 0 10px 160px;
+    }
+  }
+
+  .swiper-slide {
+    flex-shrink: 1 !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  
+    @include Desktop {
+      flex-shrink: 0 !important;
+      width: 570px !important;
+    }
+    @include TabletMax {
+      width: auto !important;
+    }
+  }
+
+  .swiper-button-prev {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    border: 1px solid $borderGray;
+    left: 20px;
+    background-image: url('../../../../../../images/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    margin-top: 175px;
+    top: 0;
+    cursor: pointer;
+
+    @include Tablet {
+      margin-top: 0;
+      bottom: 12%;
+      left: 45%;
+      transform: translate(-50%, -50%);
+      top: auto;
+    }
+
+    @include Phone {
+      left: 40%;
+      bottom: 14%;
+    }
+    @include MiniPhone {
+      left: 40%;
+    }
+  }
+
+  .swiper-button-next {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    border: 1px solid $borderGray;
+    right: 20px;
+    background-image: url('../../../../../../images/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(-180deg);
+    z-index: 10;
+    margin-top: 175px;
+    top: 0;
+    cursor: pointer;
+
+    @include Tablet {
+      margin-top: 0;
+      bottom: 12%;
+      left: 58%;
+      transform: translate(-50%, -50%) rotate(-180deg);
+      top: auto;
+    }
+
+    @include Phone {
+      left: 55%;
+      bottom: 14%;
+    }
+    @include MiniPhone {
+      left: 60%;
+    }
+  }
+
+  
+  .swiper-pagination {
+    top: 90%;
+    width: 200px !important;
+    display: flex;
+    gap: 15px;
+    margin-left: 50px;
+  }
+}

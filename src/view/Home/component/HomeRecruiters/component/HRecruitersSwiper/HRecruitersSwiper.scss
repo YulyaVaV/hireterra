@@ -1,0 +1,168 @@
+@import '../../../../../../utils/vars.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.hrecruiters-swiper {
+
+  .swiper-wrapper {
+    display: flex !important;
+    // gap: 60px;
+
+    @include Phone {
+      // gap: 20px;
+    }
+  }
+
+  .swiper-slide {
+    width: 360px !important;
+    // flex-shrink: 1 !important;
+    // display: flex !important;
+    // justify-content: center;
+    // align-items: center;
+  }
+  
+  .swiper-button-prev {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    border: 1px solid $blue;
+    background-image: url('../../../../../../images/HomeImg//arrow-white.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    bottom: 40px;
+    // left: 40%;
+    left: 480px;
+    transition: .4s;
+    cursor: pointer;
+
+    &:hover {
+      border: none;
+      background-color: $white;
+      background-image: url('../../../../../../images/HomeImg/blue-arrow.svg');
+      transform: rotate(-180deg);
+
+      @include Tablet {
+        left: 45%;
+        bottom: 5%;
+        transform: translate(-50%, -50%) rotate(-180deg);
+      }
+      @include xl {
+        left: 40%;
+      }
+      @include Phone {
+        bottom: 1%;
+      }
+    }
+
+    @include lg {
+      left: 40%;
+    }
+
+    @include Tablet {
+      left: 45%;
+      bottom: 5%;
+      transform: translate(-50%, -50%);
+    }
+    @include xl {
+      left: 40%;
+    }
+    @include Phone {
+      bottom: 1%;
+    }
+  }
+
+  .swiper-button-next {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    border: 1px solid $blue;
+    background-image: url('../../../../../../images/HomeImg//arrow-white.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+    transform: rotate(-180deg);
+    bottom: 40px;
+    // left: 45%;
+    left: 543px;
+    transition: .4s;
+    cursor: pointer;
+
+    @include lg {
+      left: 55%;
+    }
+
+    @include Tablet {
+      left: 55%;
+      bottom: 5%;
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+    @include Phone {
+      bottom: 1%;
+      left: 56%;
+    }
+    @include MiniPhone {
+      left: 60%;
+    }
+
+    &:hover {
+      border: none;
+      background-color: $white;
+      background-image: url('../../../../../../images/HomeImg/blue-arrow.svg');
+      transform: rotate(0);
+
+      @include Tablet {
+        left: 55%;
+        bottom: 5%;
+        transform: translate(-50%, -50%);
+      }
+      @include Phone {
+        bottom: 1%;
+        left: 56%;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10% !important;
+    left: 245px !important;
+    transform: translate(-50%, -50%);
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullets {
+    width: auto !important; 
+    margin: 0 !important;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 120px !important;
+    height: 2px !important;
+    background: $blue;
+    border-radius: 0 30px 30px 0;
+    opacity: 1 !important;
+    margin: 0 !important;
+
+    @include lgMax {
+      width: 60px !important;
+    }
+    @include Desktop {
+      
+    }
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: $white !important;
+    width: 240px !important;
+    height: 2px !important;
+    border-radius: 30px;
+  }
+}

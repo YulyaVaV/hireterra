@@ -1,0 +1,28 @@
+@import '../../../../utils/mixins.scss';
+@import '../../../../utils/vars.scss';
+
+.message-cand {
+  text-align: left;
+
+  @include Tablet {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+    color: $white;
+    padding-bottom: 10px;
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $white;
+    padding-bottom: 10px;
+  }
+}

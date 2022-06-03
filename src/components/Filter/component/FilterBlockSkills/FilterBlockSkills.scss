@@ -1,0 +1,46 @@
+@import '../../../../utils/vars.scss';
+
+.filter-block-skills {
+  &__skills {
+    display: flex;
+    gap: 4px;
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 10px;
+      background: $borderBlue;
+      border: 1px solid $borderBlue;
+      border-radius: 50px;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 24px;
+      color: $white;
+    }
+  }
+
+  &__input {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid $black;
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+
+  &__vacancy {
+    &-wrapp {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &-item {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 24px;
+      color: $black;
+    }
+  }
+}

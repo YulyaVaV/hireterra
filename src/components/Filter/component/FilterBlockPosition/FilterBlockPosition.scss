@@ -1,0 +1,19 @@
+@import '../../../../utils/vars.scss';
+
+.filter-position {
+  &__input {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid $black;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+  
+  &__examp {
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 24px;
+    color: $black;
+    padding-bottom: 6px;
+  }
+}

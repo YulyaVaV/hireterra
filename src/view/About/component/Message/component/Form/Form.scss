@@ -1,0 +1,65 @@
+@import '../../../../../../utils/mixins.scss';
+@import '../../../../../../utils/vars.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; 
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+    position: relative;
+  }
+
+  label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: .3s;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+    color: $black;
+
+    @include Phone {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  
+  input {
+    padding: 10px 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid $white;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+
+    @include Phone {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  input:focus~label,
+  input:hover~label,
+  input:valid~label {
+    font-size: 10px;
+    top: -10px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}

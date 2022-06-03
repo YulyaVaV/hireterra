@@ -1,0 +1,40 @@
+@import '../../../utils/vars.scss';
+@import '../../../utils/mixins.scss';
+
+.footer-link {
+  display: block;
+  // grid-template-columns: 1fr 1fr 1fr;
+  column-count: 3;
+  width: 100%;
+
+  @include Tablet {
+    justify-content: space-between;
+  }
+
+  &__link {
+    color: $white;
+    ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: left;
+    padding-bottom: 10px;
+    margin-left: 85px;
+    white-space: nowrap;
+    display: block;
+
+    @include Desktop {
+      margin-left: 30px;
+    }
+    @include TabletMax {
+      margin-left: 15px;
+    }
+    @include Tablet {
+      margin-left: 0;
+    }
+    @include Phone {
+      font-size: 12px;
+    }
+  }
+}

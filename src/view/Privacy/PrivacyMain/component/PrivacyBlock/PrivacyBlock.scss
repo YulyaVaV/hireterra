@@ -1,0 +1,27 @@
+@import '../../../../../utils/vars.scss';
+@import '../../../../../utils/mixins.scss';
+
+.privacy-block {
+  &__caption {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+    color: $black;
+    padding-bottom: 10px;
+
+    @include Phone {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include Phone {
+      gap: 15px;
+    }
+  }
+}

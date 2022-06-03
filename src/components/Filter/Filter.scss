@@ -1,0 +1,55 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/vars.scss';
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+    color: $black;
+    text-align: left;
+    padding-bottom: 10px;
+
+    @include Phone {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__container {
+    margin-bottom: 5px;
+  }
+
+  &__show {
+    display: none;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+
+    &-clear {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 24px;
+      color: $black;
+
+      @include Phone {
+        padding-right: 13px;
+        font-size: 10px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+}

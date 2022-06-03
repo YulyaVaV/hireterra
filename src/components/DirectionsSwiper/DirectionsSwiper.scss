@@ -1,0 +1,53 @@
+@import '../../utils/vars.scss';
+@import '../../utils/mixins.scss';
+
+.directions-swiper {
+  position: relative;
+
+  .swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 125px;
+    gap: 20px;
+
+    @include Phone {
+      padding-bottom: 96px;
+    }
+  }
+
+  .swiper-slide {
+    max-width: 270px;
+    width: 100% !important;
+  }
+
+  .swiper-pagination {
+    display: none;
+
+    @include Tablet {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 9% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  .swiper-pagination-bullet {
+    width: 3px !important;
+    height: 3px !important;
+    background: $black;
+    border-radius: 50%;
+    opacity: 1 !important;
+    margin: 0 !important;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: $white !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+  }
+}

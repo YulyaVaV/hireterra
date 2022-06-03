@@ -1,0 +1,21 @@
+@import '../../utils/vars.scss';
+@import '../../utils/mixins.scss';
+
+.symbol-black {
+  cursor: pointer;
+  height: 20px;
+ 
+  @include Phone {
+    height: 16px;
+  }
+
+  path {
+    transition: .4s;
+  }
+
+  &:hover {
+    path {
+      fill: $orange;
+    }
+  }
+}

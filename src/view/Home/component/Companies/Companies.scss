@@ -1,0 +1,106 @@
+@import '../../../../utils/vars.scss';
+@import '../../../../utils/mixins.scss';
+
+.companies {
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: -197px;
+  position: relative;
+
+  &__content {
+    transform: translateY(225px);
+    padding: 0 160px 100px;
+    background-color: $lightGrayBg;
+    position: relative;
+
+    @include Desktop {
+      padding: 0 40px 130px;
+      transform: translateY(255px);
+    }
+    @include md {
+      transform: translateY(205px);
+      padding-bottom: 60px;
+    }
+    @include Phone {
+      padding: 0 10px 60px;
+    }
+
+    &-line {
+      outline: none;
+      border: none;
+      height: 2px;
+      width: 84%;
+      background-color: $white;
+      position: absolute;
+      z-index: 15;
+      top: -1%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @include md {
+        display: none;
+      }
+    }
+  }
+
+  &__companies {
+    display: flex;
+    align-items: center;
+    padding: 46px 0 43px;
+
+    &-wrapp {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+
+      @include TabletMax {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      @include md {
+        gap: 15px;
+      }
+    }
+  }
+
+  &__work {
+    ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+    color: $black;
+
+    @include Phone {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 124px;
+
+    @include Tablet {
+      padding-bottom: 80px;
+    }
+
+    @include Phone {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__img {
+    @include md {
+      width: 110px;
+      height: 20px;
+    }
+  }
+}
+

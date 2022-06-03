@@ -1,0 +1,162 @@
+@import '../../../../utils/vars.scss';
+@import '../../../../utils/mixins.scss';
+
+.home-recruiters {
+  &__title {
+    margin-top: 18%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 140px;
+  
+    @include Desktop {
+      margin-top: 22%;
+    }
+    @include Tablet {
+      padding: 0 40px 100px;
+    }
+    @include Phone {
+      padding: 0 10px 60px;
+      margin-top: 26%;
+    }
+  
+    &-main {
+      padding: 20px 40px 0;
+
+      @include Tablet {
+        padding: 0;
+      }
+    }
+  
+    &-subtitle {
+      padding-top: 20px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px;
+      color: $black;
+      width: 100%;
+  
+      @include Phone {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &__wrapp {
+    display: flex;
+    box-shadow: $shadow;
+    border-radius: 50px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 160px 83px;
+
+    @include Desktop {
+      margin: 0 40px 74px;
+    }
+    @include Tablet {
+      align-items: flex-end;
+      flex-direction: column;
+      justify-content: center;
+    }
+    @include Phone {
+      margin: 0 10px 44px;
+    }
+
+    &-videos {
+      background: $blueButton;
+      padding: 60px 0 133px 60px;
+      border-radius: 0 50px 50px 0;
+      overflow: hidden;
+      position: relative;
+
+      @include Tablet {
+        max-width: 810px;
+        width: 100%;
+        border-radius: 0 0 50px 50px;
+        padding-left: 40px;
+      }
+      @include Phone {
+        padding: 20px 20px 83px;
+      }
+    }
+    
+    &-info {
+      max-width: 400px;
+      width: 100%;
+      background: $white;
+      border-radius: 50px 0px 0px 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 75px 60px 63px;
+
+      @include TabletMax {
+        padding-top: 0;
+        max-width: 100%;
+      }
+      @include md {
+        padding: 0 40px 40px;
+      }
+      @include Phone {
+        padding: 20px 20px 38px;
+      }
+    }
+
+    &-legend {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px;
+      color: $orange;
+      padding-bottom: 20px;
+
+      @include Phone {
+        padding-bottom: 10px;
+        font-size: 14px;
+      }
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 56px;
+      color: $black;
+      text-align: left;
+      padding-bottom: 80px;
+      position: relative;
+      
+      &::after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: $orangeGradient;
+        outline: none;
+        border: none;
+        margin-bottom: 20px;
+        position: absolute;
+        z-index: 15;
+        bottom: 0;
+        left: 0;
+      }
+
+      @include Phone {
+        padding-bottom: 40px;
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+    
+    &-subtitle {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      color: $black;
+      padding-bottom: 20px;
+      text-align: left;
+
+      &-word {
+        color: $orange;
+      }
+    }
+  }
+}

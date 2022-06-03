@@ -1,0 +1,79 @@
+@import '../../../../../../utils/vars.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.testimonials-card {
+  padding: 40px 30px;
+  background: $white;
+  border-radius: 50px;
+  width: 420px;
+  // height: 100%;
+  height: 390px;
+  // width: 100%;
+  box-shadow: $shadow;
+
+  @include Desktop {
+    // width: auto;
+  }
+
+  @include Phone {
+    width: 340px;
+    height: 242px;
+    padding: 20px 10px;
+    border-radius: 20px;
+  }
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  &__img {
+    margin-right: 20px;
+
+    @include Phone {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+  }
+  &__person {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  &__position {
+    ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+
+    @include Phone{
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+  &__name {
+    ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: $black;
+  }
+  &__descr {
+    ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $black;
+    text-align: left;
+
+    @include Phone {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}

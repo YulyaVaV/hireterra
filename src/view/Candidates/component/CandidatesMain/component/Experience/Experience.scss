@@ -1,0 +1,30 @@
+@import '../../../../../../utils/mixins.scss';
+@import '../../../../../../utils/vars.scss';
+
+.experience {
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $black;
+  white-space: nowrap;
+  flex-wrap: wrap;
+
+  @include Phone {
+    font-size: 10px;
+    line-height: 20px;
+  }
+
+  &__position {
+    margin-right: 3px;
+  }
+
+  &__period {
+    color: $orange;
+    margin-left: 4px;
+  }
+
+  &__wrapp {
+    display: flex;
+  }
+}

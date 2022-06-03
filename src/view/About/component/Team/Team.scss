@@ -1,0 +1,55 @@
+@import '../../../../utils/mixins.scss';
+@import '../../../../utils/vars.scss';
+
+.team {
+  background-color: $lightGrayBg;
+  padding: 100px 160px 20px;
+
+  @include Desktop {
+    padding: 100px 40px 20px;
+  }
+
+  @include Phone {
+    padding: 40px 10px 50px;
+  }
+
+  &__title {
+    padding-bottom: 40px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 56px;
+    color: $black;
+
+    @include Phone {
+      padding-bottom: 20px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+    color: $black;
+    padding-bottom: 10px;
+
+    @include Phone {
+      font-size: 18px;
+      line-height: 30px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__wrapp {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+
+    @include Tablet {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  }
+}

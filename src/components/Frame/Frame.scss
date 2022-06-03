@@ -1,0 +1,68 @@
+@import '../../utils/vars.scss';
+@import '../../utils/mixins.scss';
+
+.frame {
+  display: flex;
+  box-shadow: $shadow;
+  border-radius: 50px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 160px 100px;
+  height: 585px;
+  position: relative;
+  z-index: 15;
+
+  @include Desktop {
+    margin: 0 40px 74px;
+  }
+  @include Tablet {
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+  @include Phone {
+    margin: 0 10px 44px;
+  }
+
+  &__videos {
+    background: $blueButton;
+    padding: 60px;
+    border-radius: 0 50px 50px 0;
+    width: 100%;
+    height: 100%;
+
+    @include Tablet {
+      border-radius: 0 0 40px 40px;
+      padding: 40px;
+    }
+    @include Phone {
+      padding: 20px 20px 30px;
+      border-radius: 0 0 30px 30px;
+    }
+  }
+  
+  &__info {
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    background: $white;
+    border-radius: 50px 0px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 75px 60px 63px;
+
+    @include Tablet {
+      max-width: 100%;
+      border-radius: 40px 40px 0px 0px;
+    }
+    @include md {
+      padding: 50px 40px 40px;
+    }
+    @include Phone {
+      padding: 20px 20px 30px;
+      border-radius: 30px 30px 0px 0px;
+    }
+  }
+}

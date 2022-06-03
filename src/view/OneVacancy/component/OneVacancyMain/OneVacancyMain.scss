@@ -1,0 +1,144 @@
+@import '../../../../utils/mixins.scss';
+@import '../../../../utils/vars.scss';
+
+.one-vacancy-main {
+  padding: 44px 160px 120px;
+  position: relative;
+
+  @include Desktop {
+    padding: 44px 40px 120px;
+  }
+  @include Phone {
+    padding: 40px 10px 80px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include Tablet {
+      flex-direction: column;
+    }
+    @include Phone {
+      gap: 20px;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__offer-button {
+    display: none;
+
+    @include Phone {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 3%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    @include Desktop {
+      top: 5%;
+    }
+    @include Phone {
+      top: 3%;
+    }
+  }
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 30px;
+    max-width: 270px;
+    width: 100%;
+    height: 50%;
+    background: $blueButton;
+    box-shadow: $shadow;
+    border-radius: 50px;
+
+    @include Tablet {
+      max-width: 100%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    @include Phone {
+      border-radius: 20px;
+      padding: 30px 10px 20px;
+      margin-top: -15px;
+    }
+  }
+
+  &__container {
+    margin-bottom: 120px;
+
+    @include Phone {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px 60px;
+    max-width: 890px;
+    width: 100%;
+    background: $white;
+    border-radius: 50px;
+    text-align: left;
+
+    @include Tablet {
+      margin-bottom: 20px;
+    }
+
+    @include Phone {
+      padding: 10px 10px 30px;
+      border-radius: 20px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 28px;
+
+    @include Phone {
+      padding-bottom: 20px;
+    }
+
+    &-name {
+      font-size: 14px;
+      line-height: 24px;
+      color: $black;
+      font-weight: 700;
+    }
+  }
+
+  &__background {
+    background-color: $lightGrayBg;
+    height: 2500px;
+    position: absolute;
+    z-index: -1;
+    top: 20%;
+    width: 100%;
+    left: 0;
+
+    @include Desktop {
+      top: 15%;
+      height: 3500px;
+    }
+
+    @include Tablet {
+      top: 8%;
+      height: 5000px;
+    }
+  }
+}

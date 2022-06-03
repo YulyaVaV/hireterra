@@ -1,0 +1,87 @@
+@import '../../../../../../utils/mixins.scss';
+@import '../../../../../../utils/vars.scss';
+
+.name-card {
+  padding-bottom: 30px;
+
+  @include Phone {
+    padding-bottom: 10px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+
+    @include md {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 0;
+    }
+
+    &-price {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 42px;
+      text-align: right;
+      color: $orange;
+
+      @include Phone {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  &__place {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    gap: 20px;
+
+    @include md {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }   
+    
+    @include Phone {
+      gap: 0;
+    }
+
+    &-cities {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      color: $black;
+
+      @include Phone {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    &-total {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px;
+      color: $black;
+
+      @include Phone {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    &-symbol {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      @include Phone {
+        gap: 10px;
+      }
+    }
+  }
+}

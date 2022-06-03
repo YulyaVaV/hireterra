@@ -1,0 +1,12 @@
+.skills-one-vacancy {
+  padding-bottom: 30px;
+
+  h2 {
+    padding-bottom: 10px;
+  }
+  &__wrapp {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+}

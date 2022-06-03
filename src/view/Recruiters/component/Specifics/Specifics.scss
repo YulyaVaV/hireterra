@@ -1,0 +1,148 @@
+@import '../../../../utils/vars.scss';
+@import '../../../../utils/mixins.scss';
+
+.specifics {
+  // background-image: url('../../../../images/gray-bg.png');
+  // background-repeat: no-repeat;
+  // top: -197px;
+  position: relative;
+
+  @include Desktop {
+    background-position: center;
+  }
+  @include Tablet {
+    background-position: top;
+  }
+
+  &__content {
+    padding: 0 160px 70px;
+    background-color: $lightGrayBg;
+    position: relative;
+
+    @include Desktop {
+      padding: 0 40px 130px;
+    }
+    @include md {
+      padding-bottom: 80px;
+    }
+    @include Phone {
+      padding: 0 10px 75px;
+    }
+
+    &-line {
+      outline: none;
+      border: none;
+      height: 2px;
+      width: 84%;
+      background-color: $white;
+      position: absolute;
+      z-index: 15;
+      top: -1%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @include md {
+        display: none;
+      }
+    }
+  }
+
+  &__companies {
+    display: flex;
+    align-items: center;
+    padding: 46px 0 90px;
+
+    @include Tablet {
+      padding: 0 0 50px;
+    }
+
+    &-wrapp {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+
+      @include TabletMax {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      @include md {
+        gap: 15px;
+      }
+    }
+  }
+
+  &__work {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+    color: $black;
+
+    @include Phone {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 60px;
+
+    @include Tablet {
+      padding-bottom: 80px;
+    }
+
+    @include Phone {
+      padding-bottom: 40px;
+    }
+
+    &-bottom {
+      color: $orange;
+
+      span {
+        color: $black;
+      }
+    }
+  }
+
+  &__img {
+    @include md {
+      width: 110px;
+      height: 20px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    gap: 40px;
+    padding-bottom: 60px;
+    justify-content: center;
+
+    @include Tablet {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__mantra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 230px;
+
+    &-symbol {
+      padding-bottom: 20px;
+    }
+
+    @include Phone {
+      padding-bottom: 180px;
+    }
+  }
+}

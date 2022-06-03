@@ -1,0 +1,148 @@
+@import '../../../../utils/vars.scss';
+@import '../../../../utils/mixins.scss';
+
+.benefits {
+  background-image: url(../../../../images/orange-bg.png);
+  padding: 74px 160px 31%;
+  position: relative;
+  background-position: center;
+
+	@include Desktop {
+		padding: 74px 40px 31%;
+	}
+  @include Phone {
+    padding: 33px 10px 30%;
+  }
+
+	&__title {
+		font-weight: 700;
+		font-size: 50px;
+		line-height: 56px;
+		color: $black;
+		text-align: left;
+		max-width: 412px;
+		width: 100%;
+		padding-bottom: 40px;
+
+    @include Tablet {
+      font-size: 42px;
+      line-height: 46px;
+    }
+
+    @include Phone {
+      font-size: 24px;
+      line-height: 32px;
+    }
+	}
+
+	&__title2 {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 70px;
+		line-height: 72px;
+		color: $black;
+		text-align: left;
+		padding-bottom: 30px;
+
+    @include Tablet {
+      font-size: 56px;
+      line-height: 62px;
+    }
+
+    @include Phone {
+      font-size: 40px;
+      line-height: 46px;
+    }
+	}
+
+  &__wrapp {
+    display: flex;
+    padding-bottom: 40px;
+    align-items: flex-start;
+		justify-content: space-between;
+		gap: 20px;
+
+    @include Tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+
+	&__block {
+		position: relative;
+		max-width: 1600px;
+		width: 100%;
+		display: flex;
+	}
+
+  &__img {
+    position: absolute;
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+	&__symbol {
+		position: absolute;
+    margin-top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    &:hover {
+      .benefits__symbol-gradient {
+        display: block;
+        width: 18.75vw;
+      }
+      .benefits__symbol-white {
+        display: none;
+      }
+    }
+	}
+
+  &__symbol-white {
+		width: 18.75vw;
+    animation-name: gradient;
+    animation-duration: .7s
+  }
+
+  &__symbol-gradient {
+    display: none;
+    animation-name: gradient;
+    animation-duration: .7s
+  }
+
+	&__play {
+		position: absolute;
+		width: 11vw;
+		left: 24%;
+		bottom: 12.5%;
+
+    @include Phone {
+      display: none;
+    }
+
+    &-black {
+      display: none;
+
+      @include Phone {
+        display: block;
+        position: absolute;
+        width: 4vw;
+        left: 43%;
+        bottom: 12.5%;
+      }
+    }
+	}
+}
+
+@keyframes gradient {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

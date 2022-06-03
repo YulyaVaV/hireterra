@@ -1,0 +1,106 @@
+@import '../../../../../../../../utils/vars.scss';
+@import '../../../../../../../../utils/mixins.scss';
+
+.one-vacancy-hightl {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+
+  @include Tablet {
+    flex-direction: column;
+  }
+  @include Phone {
+    gap: 10px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 30px 30px;
+    gap: 10px;
+    max-width: 405px;
+    width: 100%;
+    background: $lightGrayBg;
+    border-radius: 20px;
+
+    @include Tablet {
+      max-width: 100%;
+    }
+
+    @include Phone {
+      padding: 10px 10px 20px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.one-vacancy-empl {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 30px 30px;
+  gap: 10px;
+  max-width: 405px;
+  width: 100%;
+  background: $lightGrayBg;
+  border-radius: 20px;
+
+  @include Tablet {
+    max-width: 100%;
+  }
+  
+  @include Phone {
+    padding: 10px 10px 20px;
+    border-radius: 20px;
+  }
+}
+
+.one-vacancy-hightlights {
+  text-align: left;
+  
+  &__wrapp {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    gap: 10px;
+
+    &-title {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+
+      @include Phone {
+        font-size: 10px;
+        line-height: 20px;
+      }
+    }
+
+    img {
+      @include Phone {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  &__descr {
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+
+    @include Phone {
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+}
+

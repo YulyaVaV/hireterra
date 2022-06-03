@@ -1,0 +1,179 @@
+@import '../../../utils/vars.scss';
+@import '../../../utils/mixins.scss';
+
+.footer-nav {
+  color: $white;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $darkGray;
+    margin: 0 0 60px;
+
+    @include Phone {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include TabletMax {
+      gap: 60px;
+    }
+    @include Tablet {
+      gap: 30px;
+      padding-bottom: 30px;
+      flex-flow: wrap;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+
+    @include Phone {
+      margin-bottom: 11px;
+      width: 100px;
+    }
+  }
+
+  &__find {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 15px;
+
+    @include Phone {
+      max-width: 100px;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__sites {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+
+    @include Phone {
+      gap: 6px;
+      margin-bottom: 11px;
+    }
+  }
+
+  &__site {
+    width: 54px;
+    height: 54px;
+    border: 1px solid $darkGray;
+    border-radius: 50%;
+    padding: 16px;
+
+    @include Phone {
+      padding: 5px;
+      width: 30px;
+      height: 30px;
+    }
+
+    img {
+      @include Phone {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  &__copyright {
+    ;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  &__location {
+    display: flex;
+    gap: 100px;
+
+    @include Desktop {
+      gap: 50px;
+    }
+    @include TabletMax {
+      gap: 20px;
+    }
+    @include Tablet {
+      flex-direction: column;
+    }
+
+    &-title {
+      padding-bottom: 10px;
+      ;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: left;
+
+      @include Phone {
+        font-size: 14px;
+      }
+    }
+    &-wrapp {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__contact {
+    text-align: left;
+    ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $white;
+
+    @include Phone {
+      font-size: 12px;
+    }
+
+    a {
+      text-align: left;
+      ;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: $white;
+    }
+  }
+
+  &__line {
+    display: none;
+
+    @include Tablet {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $darkGray;
+      outline: none;
+      border: none;
+      margin: 0;
+    }
+  }
+
+  &__links {
+
+    @include Tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+}

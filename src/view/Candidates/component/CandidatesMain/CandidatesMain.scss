@@ -1,0 +1,84 @@
+@import '../../../../utils/mixins.scss';
+@import '../../../../utils/vars.scss';
+
+.candidates-main {
+  padding: 0 160px 0;
+  background-color: $lightGrayBg;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  @include Desktop {
+    padding: 0 40px 20px;
+  }
+  @include Tablet {
+    flex-direction: column;
+  }
+  @include Phone {
+    gap: 20px;
+    padding: 0 10px 20px;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 270px;
+
+    @include Tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__filter {
+    padding: 40px 30px 30px;
+    max-width: 270px;
+    width: 100%;
+    text-align: left;
+    background: $white;
+    box-shadow: $shadow;
+    border-radius: 50px;
+
+    @include Tablet {
+      max-width: 100%;
+    }
+
+    @include Phone {
+      border-radius: 20px;
+      padding: 30px 10px 20px;
+      margin-top: -15px;
+      // display: none;
+    }
+
+    &-open {
+
+      @include Phone {
+        display: none;
+      }
+    }
+  }
+
+  &__blue-button {
+    display: none;
+
+    @include Phone {
+      display: block;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__time {
+    color: $orange;
+  }
+
+  &__pagination {
+    padding-bottom: 120px;
+
+    @include Phone {
+      padding-bottom: 80px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../../../../../utils//mixins.scss';
+
+.education {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+
+  @include Phone {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}

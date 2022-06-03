@@ -1,0 +1,153 @@
+@import '../../../../../../utils/mixins.scss';
+@import '../../../../../../utils/vars.scss';
+
+.team-card {
+  position: relative;
+
+  &__wrapp {
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include Phone {
+      padding-bottom: 20px;
+    }
+
+    &-img {
+      max-width: 270px;
+      width: 100%;
+      margin-bottom: 20px;
+
+      @include Phone {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-name {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 42px;
+      color: $black;
+      padding-bottom: 10px;
+    }
+
+    &-position {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      color: $black;
+      padding-bottom: 12px;
+
+      @include Phone {
+        font-size: 14px;
+        line-height: 22px;
+        padding-bottom: 0;
+      }
+    }
+
+    &-read-bio {
+      display: flex;
+      gap: 10px;
+      cursor: pointer;
+
+      @include Phone {
+        font-size: 10px;
+        line-height: 20px;
+      }
+
+      p {
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      &:hover {
+        path {
+          fill: $orange;
+        }
+      }
+    }
+  }
+
+
+  &__open {
+    position: absolute;
+    top: -1px;
+    padding: 30px;
+    max-width: 480px;
+    width: 100%;
+    background: $white;
+    box-shadow: $shadow;
+    border-radius: 50px;
+    text-align: left;
+    z-index: 15;
+    left: 50%;
+    transform: translate(-50%, -1%);
+
+    @include xl {
+      max-width: 100% ;
+    }
+
+    &-wrapp {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    &-bio {
+      display: flex;
+      gap: 10px;
+
+      p {
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      &:hover {
+        path {
+          fill: $orange;
+        }
+      }
+    }
+
+    &-info {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      color: $black;
+    }
+
+    &-position {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      color: $black;
+      padding-bottom: 10px;
+
+      @include Phone {
+        font-size: 14px;
+        line-height: 22px;
+        padding-bottom: 0;
+      }
+    }
+
+    &-name {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 42px;
+      color: $black;
+      padding-bottom: 10px;
+  
+      @include Phone {
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__close {
+    display: none;
+  }
+}

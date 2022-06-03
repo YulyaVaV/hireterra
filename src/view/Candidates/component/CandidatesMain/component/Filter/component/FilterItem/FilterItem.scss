@@ -1,0 +1,37 @@
+@import '../../../../../../../../utils/vars.scss';
+@import '../../../../../../../../utils/mixins.scss';
+
+.filter-item {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6px; 
+    align-items: center;
+
+    &-arrow {
+      transition: .3s;
+    }
+
+    &-line {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $lightGrayBg;
+      outline: none;
+      border: none;
+      margin: 0 0 6px;
+    }
+
+    &-name {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      color: $black;
+
+      @include Phone {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}

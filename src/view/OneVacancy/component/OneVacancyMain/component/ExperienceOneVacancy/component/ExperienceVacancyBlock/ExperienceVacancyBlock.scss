@@ -1,0 +1,76 @@
+@import '../../../../../../../../utils/vars.scss';
+@import '../../../../../../../../utils/mixins.scss';
+
+.experience-vacancy-block {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding-bottom: 30px;
+
+  @include md {
+    flex-direction: column;
+  }
+  @include Phone {
+    padding-bottom: 20px;
+    gap: 10px;
+  }
+
+  &__title {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  &__position {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+
+    @include Phone {
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+
+  &__period {
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+
+    @include Phone {
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__skills {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  &__show {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 4px;
+    cursor: pointer;
+
+    p {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 24px;
+      color: $orange;
+
+      @include Phone {
+        font-size: 10px;
+        line-height: 20px;
+      }
+    }
+  }
+}

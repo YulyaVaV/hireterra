@@ -1,0 +1,38 @@
+@import '../../../../../../../utils/vars.scss';
+@import '../../../../../../../utils/mixins.scss';
+
+.education-list {
+  &__place {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: $black;
+
+    @include Phone {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &__position {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+
+    @include Phone {
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+  &__period {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+
+    @include Phone {
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+}

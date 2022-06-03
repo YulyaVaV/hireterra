@@ -1,0 +1,20 @@
+@import '../../../../../utils/vars.scss';
+
+
+.privacy-how-use {
+  &__caption {
+
+    &-title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 24px;
+      color: $black;
+    }
+    &-descr {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: $black;
+    }
+  }
+}

@@ -1,0 +1,160 @@
+@import '../../../../utils/mixins.scss';
+@import '../../../../utils/vars.scss';
+
+.contact-header {
+  padding: 100px 160px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include Desktop {
+    padding: 100px 40px 0;
+  }
+  @include Tablet {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  @include Phone {
+    padding: 38px 10px 0;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 22%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    @include Desktop {
+      top: 27%;
+    }
+    @include TabletMax {
+      // top: 33%;
+    }
+    @include Tablet {
+      top: 44%;
+    }
+    @include Phone {
+      top: 34%;
+    }
+  }
+
+  &__wrapp {
+    max-width: 340px;
+    width: 100%;
+    text-align: left;
+  }
+
+  &__title {
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 72px;
+    color: $black;
+
+    @include Phone {
+      font-size: 40px;
+      line-height: 46px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $black;
+  }
+
+
+  &__card {
+    background: $white;
+    border: 1px solid $orange;
+    border-radius: 120px;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    // position: relative;
+    left: 0;
+
+    @include TabletMax {
+      width: 250px;
+      gap: 20px;
+    }
+
+    &-gradient {
+      @include TabletMax {
+        width: 90px;
+        height: 90px;
+      }
+    }
+    &-name {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 42px;
+      color: $black;
+    }
+  }
+
+  &__ui {
+    position: absolute;
+    right: 0;
+  }
+  &__qa {
+    position: absolute;
+    bottom: -64%;
+    left: 265px;
+
+    @include TabletMax {
+      left: 224px;
+    }
+    @include Tablet {
+      left: 50%;
+      bottom: -110%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__netw {
+    position: absolute;
+    top: -90%;
+    left: 215px;
+
+    @include TabletMax {
+      top: -116%;
+      left: 173px;
+    }
+    @include Tablet {
+      left: 47%;
+      top: -68%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__process {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+    max-width: 680px; 
+    width: 100%;
+
+    @include Tablet {
+      margin-top: 100px;
+      max-width: 100%;
+    }
+
+    @include xl {
+      display: none;
+    }
+  }
+
+  &__vacancy {
+    display: none; 
+
+    @include xl {
+      display: block;
+      width: 100%;
+    }
+  }
+}

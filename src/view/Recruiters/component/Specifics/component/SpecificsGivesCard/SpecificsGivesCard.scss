@@ -1,0 +1,98 @@
+@import '../../../../../../utils/mixins.scss';
+@import '../../../../../../utils/vars.scss';
+
+.specifics-gives {
+  position: relative;
+  height: 100%;
+
+  &__main {
+    position: relative;
+    text-align: left;
+    padding: 30px;
+    width: 374px;
+    height: 100%;
+    background: $orange;
+    border-radius: 50px;
+    z-index: 2;
+
+    @include Phone {
+      width: 240px;
+      border-radius: 30px;
+      padding: 20px;
+    }
+
+    &-title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: $black;
+      padding-bottom: 10px;
+
+      @include Phone {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &-descr {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      color: $black;     
+      
+      @include Phone {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &__transparent {
+    position: absolute;
+    text-align: left;
+    padding: 30px;
+    width: 374px;
+    height: 100%;
+    background: $lightGrayBg;
+    border-radius: 50px;
+    border: 2px solid $white;
+    top: -165px;
+    z-index: 1;
+
+    @include Phone {
+      width: 240px;
+      border-radius: 30px;
+      padding: 20px;
+      top: -145px;
+    }
+
+    &-title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: $black;
+      padding-bottom: 10px;
+
+      @include Phone {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    
+    &-descr {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      color: $black;
+
+      @include Phone {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}

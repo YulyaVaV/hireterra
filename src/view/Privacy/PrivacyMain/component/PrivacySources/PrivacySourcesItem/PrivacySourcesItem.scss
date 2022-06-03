@@ -1,0 +1,42 @@
+@import '../../../../../../utils/vars.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.privacy-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 20px;
+
+  @include Phone {
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  &:first-child {
+    padding-top: 20px;
+
+    @include Phone {
+      padding-top: 10px;
+    }
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &__point {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+
+    @include Phone {
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+
+  &__item {
+    margin-top: 8px;
+  }
+}

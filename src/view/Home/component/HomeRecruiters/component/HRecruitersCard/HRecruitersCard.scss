@@ -1,0 +1,66 @@
+@import '../../../../../../utils/vars.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.hrecruiters-card {
+  background-color: $white;
+  border-radius: 20px;
+  width: 360px;
+  position: relative;
+  transition: .4s ease;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: $shadow;
+    .hrecruiters-card__play {
+      path {
+        fill: $orange;
+      }
+    }
+  }
+
+  @include Phone {
+    width: 300px;
+  }
+
+  &__img {
+    width: 360px;
+    @include Phone {
+      width: 300px;
+    }
+  }
+
+  &__person {
+    display: flex;
+    gap: 20px;
+    padding: 20px 40px;
+    align-items: center;
+
+    @include Phone {
+      padding: 20px;
+    }
+  }
+
+  &__name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &__name-wrapp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__play {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+
+    path {
+      transition: .4s ease;
+    }
+  }
+}

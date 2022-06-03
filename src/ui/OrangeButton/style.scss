@@ -1,0 +1,55 @@
+@import '../../utils/vars.scss';
+@import '../../utils/mixins.scss';
+
+.orange-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  background-image: $orangeButton;
+  border-radius: 50px;
+  ;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: $black;
+  max-width: 200px;
+  width: 100%;
+
+  z-index: 1;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background: $orangeGradient;
+    transition: opacity 0.4s ease-out;
+    opacity: 0;
+  }
+  &:hover:after {
+    opacity: 1;
+  }
+  & span {
+    position: relative;
+    z-index: 3;
+    white-space: nowrap;
+
+    @include Phone {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  @include Phone {
+    padding: 12px 30px;
+  }
+}

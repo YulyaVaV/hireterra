@@ -1,0 +1,146 @@
+@import '../../../../utils/mixins.scss';
+@import '../../../../utils/vars.scss';
+
+.about-header {
+  padding: 100px 160px 0;
+  display: flex;
+  justify-content: space-between;
+
+  @include Desktop {
+    padding: 100px 40px 0;
+  }
+  @include Tablet {
+    flex-direction: column;
+    gap: 15px;
+  }
+  @include Phone {
+    padding: 38px 10px 0;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 30%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    @include Desktop {
+      // top: 77%;
+      top: 35%;
+    }
+
+    @include Tablet {
+      // top: 90%;
+      top: 60%;
+    }
+
+    @include Phone {
+      // top: 94%;
+      top: 50%;
+    }
+  }
+
+
+  &__wrapp {
+    max-width: 340px;
+    width: 100%;
+    text-align: left;
+  }
+
+  &__title {
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 72px;
+    color: $black;
+
+    @include Phone {
+      font-size: 40px;
+      line-height: 46px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $black;
+  }
+
+
+  &__card {
+    padding: 30px 60px 20px;
+    width: 260px;
+    // height: 100px;
+    background: $white;
+    border: 1px solid $orange;
+    box-shadow: $shadow;
+    border-radius: 50px;
+    text-align: left;
+
+    @include xll {
+      width: 200px;
+      padding: 20px 50px 15px;
+    }
+
+    &-position {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 30px;
+      color: $black;
+
+      @include Phone {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    &-name {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 20px;
+      color: $black;
+    }
+  }
+
+  &__process {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    gap: 70px;
+
+    @include lg {
+      gap: 30px;
+    }
+    @include TabletMax {
+      flex-direction: column;
+      gap: 70px;
+    }
+    @include xll {
+      gap: 50px;
+    }
+  }
+
+  &__cyber {
+    position: relative;
+
+    &-gradient {
+      position: absolute;
+      top: 24%;
+      left: -24%;
+
+      svg {
+        @include xll {
+          width: 85px;
+          height: 85px;
+        }
+      }
+
+      @include TabletMax {
+        top: -12%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

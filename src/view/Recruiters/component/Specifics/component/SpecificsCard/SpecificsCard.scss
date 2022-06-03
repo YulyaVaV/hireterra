@@ -1,0 +1,52 @@
+@import '../../../../../../utils/mixins.scss';
+@import '../../../../../../utils/vars.scss';
+
+.specifics-card {
+  text-align: left;
+  padding: 40px 30px 30px;
+  gap: 10px;
+  max-width: 420px;
+  width: 100%;
+  background: $white;
+  border-radius: 50px;
+
+  @include Phone {
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+    color: $black;
+    padding: 10px 0;
+
+    @include Phone {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+  &__descr {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $black;
+
+    @include Phone {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__img {
+
+    @include Phone {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

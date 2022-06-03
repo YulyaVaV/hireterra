@@ -1,0 +1,83 @@
+@import '../../../../../../utils/mixins.scss';
+@import '../../../../../../utils/vars.scss';
+
+.recr-videos {
+  background-color: $white;
+  border-radius: 20px;
+  position: relative;
+
+  &__img {
+    max-width: 680px;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+
+    @include TabletMax {
+      max-width: 100%;
+    }
+  }
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0 27px 40px;
+    text-align: left;
+
+    @include Phone {
+      padding: 10px 0 13px 20px;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: $black;
+  }
+
+  &__position {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+  }
+
+  &__play {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    right: 7%;
+    bottom: 29%;
+    cursor: pointer;
+
+    @include Phone {
+      display: none;
+    }
+
+    &-mob {
+      display: none;
+
+      @include Phone {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &-play {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      background: $orange;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+}

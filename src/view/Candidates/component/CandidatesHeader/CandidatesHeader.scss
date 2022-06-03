@@ -1,0 +1,113 @@
+@import '../../../../utils/mixins.scss';
+@import '../../../../utils/vars.scss';
+
+.candidates-header {
+  padding: 62px 160px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include Desktop {
+    padding: 62px 40px 0;
+  }
+  @include Tablet {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  @include Phone {
+    padding: 38px 10px 0;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    @include Desktop {
+      top: 12%;
+    }
+    @include Tablet {
+      top: 20%;
+    }
+    @include md {
+      top: 30%;
+    }
+    @include xll {
+      top: 42%;
+    }
+    @include Phone {
+      top: 14%;
+    }
+  }
+
+  &__wrapp {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 60px;
+
+    @include Tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    @include Phone {
+      padding-bottom: 43px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 72px;
+    color: $black;
+
+    @include Phone {
+      font-size: 40px;
+      line-height: 46px;
+    }
+  }
+
+  &__instruction {
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    max-width: 729px;
+    width: 100%;
+    background: $white;
+    box-shadow: $shadow;
+    border-radius: 50px;
+    gap: 20px;
+
+    @include Phone {
+      border-radius: 20px;
+      padding: 10px 20px;
+      gap: 10px;
+    }
+
+    &-text {
+      font-size: 18px;
+      line-height: 30px;
+      color: $black;
+
+      @include Phone {
+        font-size: 10px;
+        line-height: 20px;
+      }
+    }
+
+    &-button {
+      @include Phone {
+        width: 84px;
+        height: 32px;
+      }
+    }
+  }
+}

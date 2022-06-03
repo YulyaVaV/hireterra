@@ -1,0 +1,41 @@
+@import '../../../../utils/mixins.scss';
+@import '../../../../utils/vars.scss';
+
+.faq-recruiters {
+  padding: 0 160px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+
+  @include Desktop {
+    padding: 0 40px 120px;
+  }
+  @include Tablet {
+    flex-direction: column;
+  }
+  @include Phone {
+    padding: 0 10px 80px;
+    gap: 20px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 72px;
+    color: $black;
+
+    @include Phone {
+      font-size: 40px;
+      line-height: 46px;
+    }
+  }
+
+  &__wrapper {
+    max-width: 880px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}

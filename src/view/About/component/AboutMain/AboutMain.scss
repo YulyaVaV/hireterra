@@ -1,0 +1,82 @@
+@import '../../../../utils/vars.scss';
+@import '../../../../utils/mixins.scss';
+
+.about-main {
+  // background-image: url('../../../../images/gray-bg.png');
+  // background-repeat: no-repeat;
+  // background-position: top;
+  // position: relative;
+  // z-index: -1;
+  // margin-top: -150px;
+  padding-top: 150px;
+
+  @include TabletMax {
+    padding-top: 100px;
+  }
+  @include Phone {
+    padding-top: 60px;
+  }  
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $lightGrayBg;
+
+    &-title {
+      padding: 20px 20px 100px;
+
+      @include Phone {
+        padding: 20px 10px 40px;
+      }
+    }
+  }
+
+  &__gradient {
+    position: relative;
+    margin-top: -200px;
+    background-image: url(../../../../images/About/orange-bg-l.png);
+    width: 100%;
+    background-repeat: no-repeat;
+
+    &-title {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 56px;
+      color: $black;
+      padding: 170px 0 40px;
+
+      @include Phone {
+        font-size: 24px;
+        line-height: 32px;
+        padding: 210px 0 20px;
+      }
+    }
+  }
+
+  &__wrapp {
+    display: flex;
+    gap: 40px;
+    padding: 0 160px;
+    justify-content: center;
+    align-items: flex-start;
+    height: 470px;
+
+    @include Desktop {
+      padding: 0 40px;
+    }
+
+    @include TabletMax {
+      height: 580px;
+    }
+    @include Tablet {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      height: auto;
+    }
+    @include Phone {
+      padding: 0 10px;
+    }
+  }
+}  

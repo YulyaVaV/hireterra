@@ -1,0 +1,14 @@
+@import '../../../../../../utils/mixins.scss';
+@import '../../../../../../utils/vars.scss';
+
+.experience-one-vacancy {
+  // padding-bottom: 20px;
+
+  &__title {
+    padding-bottom: 10px;
+
+    @include Phone {
+      padding-bottom: 0;
+    }
+  }
+}

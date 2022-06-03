@@ -1,0 +1,158 @@
+@import '../../../../utils/mixins.scss';
+@import '../../../../utils/vars.scss';
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px 60px;
+  background: $borderBlue;
+  box-shadow: $shadow;
+  border-radius: 50px;
+  margin: 0 160px 100px;
+
+  @include Desktop {
+    margin: 0 40px 100px;
+  }
+  @include md {
+    padding: 30px;
+  }
+  @include Phone {
+    margin: 0 10px 40px;
+    border-radius: 30px;
+  }
+
+  &__above {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: $black;
+    padding-bottom: 10px;
+
+    @include Phone {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 56px;
+    color: $white;
+    padding-bottom: 20px;
+
+    @include Phone {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__wrapp {
+    display: flex;
+    gap: 40px;
+    padding-bottom: 30px;
+
+    @include md {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    @include Phone {
+      gap: 10px;
+    }
+  }
+
+  &__benefit {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    &-text {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: $white;
+
+      @include Phone {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    img {
+      @include Phone {
+        width: 13px;
+        height: 10px;
+      }
+    }
+  }
+
+  &__line {
+    width: 100%;
+    border: none;
+    outline: none;
+    margin: 0 0 20px;
+    background-color: $white;
+    height: 2px;
+  }
+
+  &__plan {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: $black;
+
+    @include Phone {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &-wrapp {
+      display: flex;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: $black;
+
+      @include md {
+        flex-direction: column;
+        gap: 2px;
+      }
+      @include Phone {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      span {
+        color: $white;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+
+        @include Phone {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  &__salary {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: $black;
+    padding-bottom: 20px;
+
+    @include Phone {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

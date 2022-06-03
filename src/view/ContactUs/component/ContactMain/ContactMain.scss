@@ -1,0 +1,18 @@
+@import '../../../../utils/mixins.scss';
+@import '../../../../utils/vars.scss';
+
+.contact-main {
+  margin-top: 150px;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $lightGrayBg;
+  padding-bottom: 20px;
+
+  @include xl {
+    margin-top: 50px;
+  } 
+  @include Phone {
+    padding-bottom: 36px;
+  }
+}  

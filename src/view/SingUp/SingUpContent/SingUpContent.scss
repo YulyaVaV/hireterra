@@ -1,0 +1,258 @@
+@import '../../../utils/vars.scss';
+@import '../../../utils/mixins.scss';
+
+.sing-up-content {
+  filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.07)) drop-shadow(0px 55.5904px 36.0244px rgba(0, 0, 0, 0.0596694)) drop-shadow(0px 36.1845px 24.6358px rgba(0, 0, 0, 0.0490718)) drop-shadow(0px 24.8991px 17.9064px rgba(0, 0, 0, 0.0377863)) drop-shadow(0px 16.4059px 12.1244px rgba(0, 0, 0, 0.0257138)) drop-shadow(0px 8.46565px 6.27213px rgba(0, 0, 0, 0.0130486));
+  padding: 55px 160px 120px;
+  position: relative;
+  // z-index: 200;
+
+  @include Desktop {
+    padding: 55px 40px 120px;
+  }
+  @include xll {
+    padding: 36px 25px 90px;
+  }
+  @include Phone {
+    padding: 36px 10px 90px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+
+    @include Desktop {
+      top: 12%;
+    }
+    @include Phone {
+      top: 8%;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    padding: 60px 60px 40px;
+    justify-content: space-between;
+    width: 100%;
+    background: linear-gradient(108.97deg, #00B2FF -115.19%, #0066FF -87.77%, #00A3FF -19.45%, #0093FD 81.68%);
+    border-radius: 50px 50px 0px 0px;
+
+    @include Tablet {
+      flex-direction: column;
+      align-items: initial;
+    }
+    @include xll {
+      padding: 40px 40px 30px;
+    }
+    @include Phone {
+      padding: 30px 20px;
+      border-radius: 20px 20px 0px 0px;
+    }
+
+    &-title {
+      text-align: left;
+
+      @include Tablet {
+        padding-bottom: 10px;
+      }
+      
+      h3 {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 56px;
+        color: $white;
+        padding-bottom: 10px;
+
+        @include Phone {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $white;
+
+        @include Phone {
+          font-size: 10px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 60px 80px;
+    width: 100%;
+    gap: 30px;
+    background: $white;
+    border-radius: 0px 0px 50px 50px;
+
+    @include Tablet {
+      flex-direction: column;
+    }
+    @include xll {
+      padding: 40px 40px 30px;
+    }
+    @include Phone {
+      padding: 20px 20px 30px;
+      border-radius: 0px 0px 20px 20px;
+
+    }
+  }
+
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+
+    @include Tablet {
+      flex-direction: column;
+    }
+    @include Phone {
+      gap: 10px;
+    }
+
+    &-looking {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 25px;
+      background: $white;
+      border-radius: 50px;
+      border: none;
+      outline: none;
+      color: $black;
+      gap: 20px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: $black;
+      height: 70px;
+
+      @include Tablet {
+        font-size: 18px;
+      }
+      @include Phone {
+        font-size: 14px;
+        line-height: 20px;
+        height: 60px;
+      }
+    }
+    &-hiring {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 25px;
+      background: transparent;
+      border-radius: 50px;
+      border: 2px solid $white;
+      outline: none;
+      color: $white;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: $white;
+      height: 70px;
+
+      @include Tablet {
+        font-size: 18px;
+      }
+      @include Phone {
+        font-size: 14px;
+        line-height: 20px;
+        height: 60px;
+      }
+    }
+  }
+
+  &__sites {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    &-fb {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 60px;
+      background: #145EE2;
+      border-radius: 50px;
+      gap: 20px;
+
+      @include xll {
+        gap: 10px;
+      }
+
+      a {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: $white;
+
+        @include xll {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+    &-linkedin {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 60px;
+      background: #1489DE;
+      border-radius: 50px;
+      gap: 20px;
+
+      @include xll {
+        gap: 10px;
+      }
+
+      a {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: $white;
+
+        @include xll {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+    &-google {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 60px;
+      background: $white;
+      border-radius: 50px;
+      border: 2px solid $blue;
+
+      @include xll {
+        gap: 10px;
+      }
+
+      a {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: $black;
+
+        @include xll {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

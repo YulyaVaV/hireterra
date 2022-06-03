@@ -1,0 +1,55 @@
+@import '../../../../../../utils/vars.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.work-benefit {
+  max-width: 240px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__wrapp {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__title {
+    text-align: left;
+    ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: $black;
+
+    @include Phone {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__number {
+    ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+    color: $black;
+    padding-bottom: 10px;
+
+    @include Phone {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__line {
+    outline: none;
+    border: none;
+    width: 2px;
+    height: 160px;
+    mix-blend-mode: overlay;
+    opacity: 0.6;
+    background-color: $white;
+  }
+}

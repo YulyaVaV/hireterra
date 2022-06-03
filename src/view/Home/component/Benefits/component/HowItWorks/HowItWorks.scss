@@ -1,0 +1,51 @@
+@import '../../../../../../utils/mixins.scss';
+@import '../../../../../../utils/vars.scss';
+
+.how-it-works {
+	&__caption {
+		font-weight: 700;
+		font-size: 70px;
+		line-height: 72px;
+		color: $black;
+		text-align: left;
+		padding-bottom: 30px;
+
+    @include Tablet {
+      font-size: 56px;
+      line-height: 62px;
+    }
+
+    @include Phone {
+      font-size: 40px;
+      line-height: 46px;
+    }
+	}
+
+  &__wrapp {
+    display: flex;
+    padding-bottom: 40px;
+    align-items: flex-start;
+		justify-content: space-between;
+		gap: 20px;
+
+    @include Tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+
+  &__card {
+		display: flex;
+		justify-content: space-between;
+
+    &-img {
+      width: 2px;
+      height: 160px;
+      background-image: url('data:image/svg+xml,%3Csvg width="2" height="160" viewBox="0 0 2 160" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cline x1="1" y1="159" x2="1" y2="1" stroke="%23FFDB37" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 8"/%3E%3C/svg%3E ');
+      @include Tablet {
+        display: none;
+      }
+    }
+	}
+}

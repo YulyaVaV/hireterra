@@ -1,0 +1,133 @@
+@import '../../../utils/vars.scss';
+@import '../../../utils/mixins.scss';
+
+.privacy {
+  margin: 60px 0 120px 160px;
+  text-align: left;
+  max-width: 770px;
+  width: 100%;
+
+  @include Desktop {
+    margin: 60px 40px 120px;
+  }
+  @include Tablet {
+    max-width: 100%;
+    width: auto;
+  }
+  @include Phone {
+    margin: 38px 10px 80px 10px;
+  }
+
+  a {
+    color: $borderBlue;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 72px;
+    color: $black;
+    padding-bottom: 10px;
+
+    @include Phone {
+      font-size: 40px;
+      line-height: 46px;
+    }
+  }
+  &__date {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+
+    @include Phone {
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+  &__descr {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+    padding: 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include Phone {
+      padding: 10px 0 20px;
+      gap: 20px;
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+
+  &__content {
+    padding-bottom: 10px;
+
+    h2 {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 42px;
+      color: $black;
+      padding-bottom: 10px;
+
+      @include Phone {
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__sources {
+    h2 {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 42px;
+      color: $black;
+      padding: 10px 0;
+
+      @include Phone {
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 0;
+      }
+    }
+    &-wrapp {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__use {
+    h2 {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 42px;
+      color: $black;
+      padding-bottom: 10px;
+
+      @include Phone {
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 0;
+      }
+    }
+    &-wrapp {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-bottom: 20px;
+    }
+  }
+}

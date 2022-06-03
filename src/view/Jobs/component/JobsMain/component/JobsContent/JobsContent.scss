@@ -1,0 +1,156 @@
+@import '../../../../../../utils/vars.scss';
+@import '../../../../../../utils/mixins.scss';
+
+.jobs-content {
+  padding: 20px 30px 40px;
+  max-width: 890px;
+  width: 100%;
+  background: $white;
+  border-radius: 50px;
+  text-align: left;
+
+  @include Phone {
+    padding: 10px 10px 20px;
+    border-radius: 20px;
+  }
+
+  &__data {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 24px;
+    color: $black;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include Phone {
+      flex-direction: column;
+    }
+
+    &-vacancy {
+      padding-bottom: 10px;
+      max-width: 510px;
+      width: 100%;
+
+      @include Phone {
+        padding-bottom: 0;
+      }
+    }
+    &-wrapp {
+      text-align: right;
+
+      @include Phone {
+        text-align: left;
+      }
+    }
+    &-legend {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: $black;
+
+      @include Phone {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+    &-price {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: $orange;
+      text-align: right;
+
+      @include Phone {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: left;
+      }
+    }
+
+    &-perHour {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: $orange;
+
+      @include Phone {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  &__offer {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding-bottom: 20px;
+
+    @include Phone {
+      padding-bottom: 10px;
+    }
+
+    h6 {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 22px;
+      color: $black;
+      max-width: 40px;
+      width: 100%;
+
+      @include Phone {
+        font-size: 10px;
+        line-height: 20px;
+      }
+    }
+    &-descr {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+
+      @include Phone {
+        font-size: 10px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__person {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include Phone {
+      gap: 10px;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+    }
+    &-name {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 22px;
+
+      @include Phone {
+        font-size: 10px;
+        line-height: 20px;
+      }
+    }
+    &-position {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+
+      @include Phone {
+        font-size: 10px;
+        line-height: 20px;
+      }
+    }
+  }
+}

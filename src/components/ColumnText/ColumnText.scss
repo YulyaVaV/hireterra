@@ -1,0 +1,54 @@
+@import '../../utils/vars.scss';
+@import '../../utils/mixins.scss';
+
+.column-text {
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+
+    @include Phone {
+      font-size: 10px;
+      line-height: 20px;
+    }
+  }
+  &__line {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 160px 1fr;
+    gap: 20px;
+    padding: 10px 0;
+
+    @include Phone {
+      grid-template-columns: 70px 1fr;
+      gap: 10px;
+      padding: 5px 0;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 22px;
+      color: $black;
+      max-width: 160px;
+      width: 100%;
+
+      @include Phone {
+        font-size: 10px;
+        line-height: 20px;
+      }
+    }
+    &-descr {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: $black;
+
+      @include Phone {
+        font-size: 10px;
+        line-height: 20px;
+      }
+    }
+  }
+}

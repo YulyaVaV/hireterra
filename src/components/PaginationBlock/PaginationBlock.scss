@@ -1,0 +1,121 @@
+@import '../../utils/vars.scss';
+@import '../../utils/mixins.scss';
+
+.pagination-block {
+  padding: 40px 50px;
+  max-width: 890px;
+  width: 100%;
+  height: 124px;
+  background: linear-gradient(108.97deg, #00B2FF -115.19%, #0066FF -87.77%, #00A3FF -19.45%, #0093FD 81.68%);
+  box-shadow: $shadow;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+
+  @include lg {
+    max-width: 730px;
+  }
+  @include desctMax {
+    max-width: 650px;
+  }
+  @include TabletMax {
+    max-width: 600px;
+  }
+  @include Tablet {
+    max-width: 100%;
+  }
+  @include Phone {
+    padding: 10px 35px;
+    height: 50px;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #4498F7;
+    border: 1px solid $white;
+    border-radius: 50px;
+    color: $white;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .2s;
+    flex: 0 0 auto;
+
+    @include Phone {
+      width: 30px;
+      height: 30px;
+      font-size: 10px;
+      line-height: 20px;
+    }
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+    }
+  }
+
+  &__numbers {
+    gap: 20px;
+    height: 50px;
+    display: flex;
+    overflow-x: auto;
+
+    @include Phone {
+      gap: 10px;
+    }
+
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+
+  &__arrow-right {
+    transform: rotate(180deg);
+    border-radius: 50%;
+    border: 1px solid #34A9FD;
+    width: 50px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .2s;
+    margin-left: 5px;
+
+    @include Phone {
+      width: 40px;
+      height: 30px;
+    }
+
+    &:hover {
+      path {
+        fill: $blue;
+      }
+      background-color: $white;
+      border: linear-gradient(108.97deg, #00B2FF -115.19%, #0066FF -87.77%, #00A3FF -19.45%, #0093FD 81.68%);
+    }
+  }
+
+  &__arrow-left {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 5px;
+
+    @include Phone {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/vars.scss';
+
+.companies-name {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    @include TabletMax {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    @include md {
+      gap: 15px;
+    }
+
+    &__title {
+      ;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 42px;
+      color: $black;
+
+      @include Phone {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+
+  &__img {
+    height: 30px;
+    @include md {
+      height: 20px;
+    }
+  }
+}
