@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__wrapper">
-        <a href="/">
+        <a href="/main">
           <Logo src="logo" className="header__logo"/>
         </a>
         <nav className="header__nav">
